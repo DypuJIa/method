@@ -1,6 +1,5 @@
 public class Main {
     public static String calculateLeapYear(int i) {
-        i = 2016;
         if (i % 4 == 0 && 1 % 100 != 0 || i % 400 == 0) {
             return i + " год - високосный";
         } else {
@@ -9,8 +8,6 @@ public class Main {
     }
 
     public static String calculateOsClient(int clientOS, int clientDeviceYear) {
-        clientOS = 0;
-        clientDeviceYear = 2015;
         if (clientDeviceYear < 2015 && clientOS == 0) {
             return (" Установите облегченную версию приложения для iOS по ссылке");
         } else if (clientDeviceYear >= 2015 && clientOS == 0) {
