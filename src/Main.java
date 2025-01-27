@@ -1,13 +1,15 @@
 public class Main {
-    public static String calculateLeapYear(int i) {
-        if (i % 4 == 0 && 1 % 100 != 0 || i % 400 == 0) {
-            return i + " год - високосный";
+    public static String calculateLeapYear(int year) {
+        year = 2016;
+        if (year % 4 == 0 && 1 % 100 != 0 || year % 400 == 0) {
+            return year + " год - високосный";
         } else {
-            return i + " год - невисокосный";
+            return year + " год - невисокосный";
         }
     }
 
-    public static String calculateOsClient(int clientOS, int clientDeviceYear) {
+    public static String calculateOsClient(int clientOS) {
+        int clientDeviceYear = 2016;
         if (clientDeviceYear < 2015 && clientOS == 0) {
             return (" Установите облегченную версию приложения для iOS по ссылке");
         } else if (clientDeviceYear >= 2015 && clientOS == 0) {
@@ -41,9 +43,9 @@ public class Main {
         System.out.println(result);
         System.out.println();
         System.out.println("Задача №2");
-        int clientDeviceYear = 2015;
+        int clientDeviceYear = 2016;
         int clientOS = 0;
-        String result2 = calculateOsClient(clientOS, clientDeviceYear);
+        String result2 = calculateOsClient(clientOS);
         System.out.println(result2);
         System.out.println();
         System.out.println("Задача №3");
